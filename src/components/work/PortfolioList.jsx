@@ -1,74 +1,87 @@
 import styled from "styled-components";
 import { Container, Section } from "../../styles/GlobalStyles.jsx";
 
-const PortfolioList = ({ isHomePage = false }) => {
-  // 임시 포트폴리오 데이터 (실제 이미지로 교체 예정)
+// 이미지들 import
+import slomarImage from "../../assets/images/portfolio/slomar_main.jpg";
+import cuoraImage from "../../assets/images/portfolio/CUORA_main.jpg";
+import metaphorImage from "../../assets/images/portfolio/metaphor_main.jpg";
+import yorogoImage from "../../assets/images/portfolio/yorogo_main.jpg";
+import futureWiseImage from "../../assets/images/portfolio/future_wise_main.jpg";
+import oroshiStudioImage from "../../assets/images/portfolio/oroshi_studio_main.jpg";
+import bizenImage from "../../assets/images/portfolio/BIZEN_main.jpg";
+import mosigoImage from "../../assets/images/portfolio/mosigo_main.jpg";
+import repeatoImage from "../../assets/images/portfolio/repeato_main.jpg";
+import gajimoImage from "../../assets/images/portfolio/gajimo_main.jpg";
+import pikByPetImage from "../../assets/images/portfolio/pik_by_pet_main.jpg";
+
+const PortfolioList = () => {
+  // 포트폴리오 데이터 - import한 이미지 사용
   const portfolioData = [
     {
       id: 1,
       title: "slomar",
       description: "Brand Logo Design",
-      image: "/src/assets/images/portfolio/slomar_main.jpg",
+      image: slomarImage,
     },
     {
       id: 2,
       title: "CUORA",
       description: "Brand Logo Design",
-      image: "/src/assets/images/portfolio/CUORA_main.jpg",
+      image: cuoraImage,
     },
     {
       id: 3,
       title: "metaphor",
       description: "Brand Design",
-      image: "/src/assets/images/portfolio/metaphor_main.jpg",
+      image: metaphorImage,
     },
     {
       id: 4,
       title: "yorogo",
       description: "Brand Design",
-      image: "/src/assets/images/portfolio/yorogo_main.jpg",
+      image: yorogoImage,
     },
     {
       id: 5,
       title: "future wise",
       description: "Brand Logo Design",
-      image: "/src/assets/images/portfolio/future_wise_main.jpg",
+      image: futureWiseImage,
     },
     {
       id: 6,
       title: "oroshi studio",
       description: "Brand Logo Design",
-      image: "/src/assets/images/portfolio/oroshi_studio_main.jpg",
+      image: oroshiStudioImage,
     },
     {
       id: 7,
       title: "BIZEN",
       description: "Brand Logo & Package Design",
-      image: "/src/assets/images/portfolio/BIZEN_main.jpg",
+      image: bizenImage,
     },
     {
       id: 8,
       title: "mosigo",
       description: "Brand Design",
-      image: "/src/assets/images/portfolio/mosigo_main.jpg",
+      image: mosigoImage,
     },
     {
       id: 9,
       title: "repeato",
       description: "Brand Design",
-      image: "/src/assets/images/portfolio/repeato_main.jpg",
+      image: repeatoImage,
     },
     {
       id: 10,
       title: "gajimo",
       description: "Brand Logo Design",
-      image: "/src/assets/images/portfolio/gajimo_main.jpg",
+      image: gajimoImage,
     },
     {
       id: 11,
       title: "pik by pet",
       description: "Brand Logo Design",
-      image: "/src/assets/images/portfolio/pik_by_pet_main.jpg",
+      image: pikByPetImage,
     },
     {
       // id: 12,
@@ -79,69 +92,41 @@ const PortfolioList = ({ isHomePage = false }) => {
   ];
 
   return (
-    <PortfolioSection isHomePage={isHomePage}>
+    <Section>
       <Container>
         <PortfolioGrid>
           {portfolioData.map((item) => (
             <PortfolioItem key={item.id}>
               <ImageWrapper>
-                <PortfolioImage
-                  src={item.image}
-                  alt={item.title}
-                  onError={(e) => {
-                    // 이미지 로드 실패 시 임시 배경색 표시
-                    e.target.style.display = "none";
-                    e.target.parentElement.style.backgroundColor = "#333";
-                  }}
-                />
+                <PortfolioImage src={item.image} alt={item.title} />
               </ImageWrapper>
-              <TextContent>
-                <ProjectTitle>{item.title}</ProjectTitle>
-                <ProjectDescription>{item.description}</ProjectDescription>
-              </TextContent>
+              <PortfolioInfo>
+                <PortfolioTitle>{item.title}</PortfolioTitle>
+                <PortfolioDescription>{item.description}</PortfolioDescription>
+              </PortfolioInfo>
             </PortfolioItem>
           ))}
         </PortfolioGrid>
       </Container>
-    </PortfolioSection>
+    </Section>
   );
 };
 
-export default PortfolioList;
-
-// 스타일 컴포넌트들
-const PortfolioSection = styled(Section)`
-  background-color: var(--color-dark);
-  ${(props) =>
-    props.isHomePage &&
-    `
-    padding-top: 0;
-  `}
-`;
-
+// Styled Components
 const PortfolioGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 4rem 3rem; /* row-gap column-gap */
-
-  @media (max-width: 1024px) {
-    gap: 3rem 2rem;
-  }
+  gap: 30px;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem 1.5rem;
-  }
-
-  @media (max-width: 480px) {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 20px;
   }
 `;
 
 const PortfolioItem = styled.div`
-  transition: transform 0.3s ease;
   cursor: pointer;
+  transition: transform 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
@@ -149,12 +134,9 @@ const PortfolioItem = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  width: 100%;
-  aspect-ratio: 4/3; /* 가로:세로 = 4:3 비율 */
+  aspect-ratio: 4/3;
   overflow: hidden;
-  background-color: var(--color-medium-gray);
-  margin-bottom: 1.5rem;
-  position: relative;
+  margin-bottom: 15px;
 `;
 
 const PortfolioImage = styled.img`
@@ -168,29 +150,21 @@ const PortfolioImage = styled.img`
   }
 `;
 
-const TextContent = styled.div`
+const PortfolioInfo = styled.div`
   text-align: left;
 `;
 
-const ProjectTitle = styled.h3`
-  font-size: 1.4rem;
+const PortfolioTitle = styled.h3`
+  color: white;
+  font-size: 24px;
   font-weight: 600;
-  color: var(--color-primary);
-  margin-bottom: 0.8rem;
-  line-height: 1.3;
-
-  @media (max-width: 768px) {
-    font-size: 1.2rem;
-    margin-bottom: 0.6rem;
-  }
+  margin: 0 0 5px 0;
 `;
 
-const ProjectDescription = styled.p`
-  font-size: 1rem;
-  color: var(--color-secondary);
-  line-height: 1.5;
-
-  @media (max-width: 768px) {
-    font-size: 0.9rem;
-  }
+const PortfolioDescription = styled.p`
+  color: #ccc;
+  font-size: 14px;
+  margin: 0;
 `;
+
+export default PortfolioList;

@@ -8,7 +8,7 @@ function App() {
     <>
       <Header />
       <MainSlider />
-      <PortfolioList isHomePage={true} />
+      <PortfolioList />
       <Footer />
     </>
   );

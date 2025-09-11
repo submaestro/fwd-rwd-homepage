@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../../styles/GlobalStyles.jsx";
+import logoImage from "../../assets/images/icons/fwd_rew_logo.svg";
 
 const Header = () => {
   return (
@@ -7,10 +8,7 @@ const Header = () => {
       <Container>
         <HeaderContent>
           <Logo href="/">
-            <LogoImage
-              src="/src/assets/images/icons/fwd_rew_logo.svg"
-              alt="FWD&RWD"
-            />
+            <LogoImage src={logoImage} alt="FWD&RWD" />
           </Logo>
 
           <Navigation>
