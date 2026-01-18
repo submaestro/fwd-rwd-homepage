@@ -7,14 +7,16 @@ const MainSlider = () => {
       <Container>
         <SliderContent>
           <CopyText>
-            FORWARD &<br />
-            REWIND
+            THE FUTURE IS
+            <br />
+            IN THE PAST
           </CopyText>
         </SliderContent>
       </Container>
     </SliderWrapper>
   );
 };
+564;
 
 export default MainSlider;
 
@@ -37,13 +39,13 @@ const SliderContent = styled.div`
 `;
 
 const CopyText = styled.h1`
-  width: 680px;
+  width: 900px;
   height: 330px;
   padding: 30px 0;
   font-family: "SUITE Variable", sans-serif;
   font-weight: 800; /* Extra Bold */
   font-size: 6rem;
-  line-height: 1.1;
+  line-height: 1.3;
   color: var(--color-primary);
   text-align: center;
   display: flex;
@@ -53,7 +55,6 @@ const CopyText = styled.h1`
 
   @media (max-width: 1024px) {
     width: 100%;
-    max-width: 680px;
     font-size: 4rem;
     height: auto;
     min-height: 280px;

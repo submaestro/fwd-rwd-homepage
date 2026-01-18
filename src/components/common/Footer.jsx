@@ -8,11 +8,11 @@ const Footer = () => {
         <FooterContent>
           <FooterInfo>
             <InfoItem>
-              <InfoLabel>CEO :</InfoLabel>
+              <InfoLabel>CEO</InfoLabel>
               <InfoText>Suby Hyun</InfoText>
             </InfoItem>
             <InfoItem>
-              <InfoLabel>Contact :</InfoLabel>
+              <InfoLabel>Contact</InfoLabel>
               <InfoText>
                 <ContactLink href="mailto:info@forward-rewind.com">
                   info@forward-rewind.com
@@ -55,23 +55,23 @@ const FooterContent = styled.div`
 
 const FooterInfo = styled.div`
   display: flex;
-  gap: 3rem;
+  gap: 4rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1rem;
+    gap: 2rem;
   }
 `;
 
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: flex-start;
-    gap: 0.2rem;
+    gap: 0rem;
   }
 `;
 
@@ -79,7 +79,7 @@ const InfoLabel = styled.span`
   font-size: 1rem;
   font-weight: 500;
   color: var(--color-secondary);
-  min-width: 80px;
+  min-width: 70px;
 
   @media (max-width: 768px) {
     font-size: 0.9rem;
@@ -92,7 +92,7 @@ const InfoText = styled.span`
   color: var(--color-primary);
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
 `;
 
