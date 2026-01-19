@@ -136,6 +136,10 @@ const SocialLinks = styled.div`
   display: flex;
   gap: 1.5rem;
   align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 1.5rem 0; /* InfoItem의 gap(2rem)과 동일하게 상하 여백 추가 */
+  }
 `;
 
 const SocialLink = styled.a`
