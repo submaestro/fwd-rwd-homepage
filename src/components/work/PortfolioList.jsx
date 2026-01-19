@@ -2,8 +2,8 @@ import styled from "styled-components";
 import { Container, Section } from "../../styles/GlobalStyles.jsx";
 
 // 이미지들 import
-import slomarImage from "../../assets/images/portfolio/slomar_main.png";
-import cuoraImage from "../../assets/images/portfolio/CUORA_main.png";
+import slomarImage from "../../assets/images/portfolio/slomar_main.jpg";
+import cuoraImage from "../../assets/images/portfolio/CUORA_main.jpg";
 import metaphorImage from "../../assets/images/portfolio/metaphor_main.png";
 import yorogoImage from "../../assets/images/portfolio/yorogo_main.jpg";
 import futureWiseImage from "../../assets/images/portfolio/future_wise_main.png";
