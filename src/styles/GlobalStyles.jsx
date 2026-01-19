@@ -9,15 +9,21 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  html, body {
-    height: 100%;
+  html {
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    min-height: 100vh;
     font-family: 'SUITE Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: #fff;
     background-color: #000;
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    margin: 0;
   }
 
   a {

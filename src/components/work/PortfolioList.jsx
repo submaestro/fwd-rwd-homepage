@@ -27,110 +27,110 @@ const PortfolioList = () => {
     {
       id: 1,
       title: "slomar",
-      description: "Brand Logo Design",
+      description: "Health Care Brand",
       image: slomarImage,
     },
     {
       id: 2,
       title: "CUORA",
-      description: "Brand Logo Design",
+      description: "Furniture Brand",
       image: cuoraImage,
     },
     {
       id: 3,
       title: "metaphor",
-      description: "Brand Design",
+      description: "Music Platform Brand",
       image: metaphorImage,
     },
     {
       id: 4,
       title: "yorogo",
-      description: "Brand Design",
+      description: "Pet Product Brand",
       image: yorogoImage,
     },
     {
       id: 5,
       title: "future wise",
-      description: "Brand Logo Design",
+      description: "Investment Brand",
       image: futureWiseImage,
     },
     {
       id: 6,
       title: "budify",
-      description: "Brand Logo Design",
+      description: "Business Service Brand",
       image: budifyImage,
     },
     {
       id: 7,
       title: "BEHINDER",
-      description: "Brand Logo Design",
+      description: "Sports Contents Brand",
       image: behinderImage,
     },
     {
       id: 8,
       title: "mosigo",
-      description: "Brand Design",
+      description: "Pet Brand",
       image: mosigoImage,
     },
     {
       id: 9,
       title: "Noah Platform",
-      description: "Brand Design",
+      description: "Music Platform Brand",
       image: noah_platformImage,
     },
     {
       id: 10,
       title: "oroshi studio",
-      description: "Brand Design",
+      description: "Brand Agency",
       image: oroshi_studioImage,
     },
     {
       id: 11,
       title: "B-Match",
-      description: "Brand Design",
+      description: "Badminton Platform",
       image: b_matchImage,
     },
     {
       id: 12,
       title: "repeato",
-      description: "Brand Design",
+      description: "Language Education Platform",
       image: repeatoImage,
     },
     {
       id: 13,
       title: "CRESYA",
-      description: "Brand Logo",
+      description: "Cosmetic Brand",
       image: cresyaImage,
     },
     {
       id: 14,
       title: "BIZEN",
-      description: "Brand Logo & Package Design",
+      description: "Healthcare Brand",
       image: bizenImage,
     },
 
     {
       id: 15,
       title: "Sinaris Lab",
-      description: "Brand Logo Design",
+      description: "Space Design Brand",
       image: sinaris_labImage,
     },
     {
       id: 16,
       title: "INTEGRIT",
-      description: "Brand Logo Design",
+      description: "Distribution Brand",
       image: integritImage,
     },
     {
       id: 17,
       title: "gajimo",
-      description: "Brand Logo Design",
+      description: "Distribution Brand",
       image: gajimoImage,
     },
     {
       id: 18,
       title: "pik by pet",
-      description: "Brand Logo Design",
+      description: "Pet Brand",
       image: pikByPetImage,
     },
   ];
@@ -212,7 +212,7 @@ const PortfolioTitle = styled.h3`
 
 const PortfolioDescription = styled.p`
   color: #ccc;
-  font-size: 14px;
+  font-size: 17px;
   margin: 0;
 `;
 

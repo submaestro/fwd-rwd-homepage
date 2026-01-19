@@ -14,16 +14,15 @@ const Footer = () => {
             <InfoItem>
               <InfoLabel>Contact</InfoLabel>
               <InfoText>
-                <ContactLink href="mailto:info@forward-rewind.com">
-                  info@forward-rewind.com
+                <ContactLink href="mailto:watsuby12@gmail.com">
+                  watsuby12@gmail.com
                 </ContactLink>
               </InfoText>
             </InfoItem>
           </FooterInfo>
-
-          <Copyright>© 2025 FORWARD & REWIND. All Rights Reserved</Copyright>
         </FooterContent>
       </Container>
+      <Copyright>© 2025 FORWARD & REWIND. All Rights Reserved</Copyright>
     </FooterWrapper>
   );
 };
@@ -66,7 +65,7 @@ const FooterInfo = styled.div`
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
-  gap: 0rem;
+  gap: 1rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -76,23 +75,23 @@ const InfoItem = styled.div`
 `;
 
 const InfoLabel = styled.span`
-  font-size: 1rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--color-secondary);
-  min-width: 70px;
+  min-width: auto;
 
   @media (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     min-width: auto;
   }
 `;
 
 const InfoText = styled.span`
-  font-size: 1rem;
+  font-size: 1.4rem;
   color: var(--color-primary);
 
   @media (max-width: 768px) {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
   }
 `;
 
@@ -110,10 +109,12 @@ const Copyright = styled.div`
   color: var(--color-secondary);
   text-align: center;
   padding-top: 1.5rem;
+  margin-top: 2rem;
   border-top: 1px solid var(--color-medium-gray);
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
     padding-top: 1rem;
+    margin-top: 1.5rem;
   }
 `;

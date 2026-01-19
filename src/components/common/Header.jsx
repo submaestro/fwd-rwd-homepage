@@ -96,10 +96,9 @@ const HeaderWrapper = styled.header`
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
   background-color: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
-  /* border-bottom: 1px solid var(--color-medium-gray); */
   z-index: 1000;
   transition: all 0.3s ease;
   padding: 2rem 0; // 상하 여백 추가
@@ -177,7 +176,7 @@ const navLinkStyles = `
   &::after {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: -5px;
     left: 0;
     width: 0;
     height: 2px;
